@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import API from '../api';
 import { Package, Clock, CheckCircle, Truck, ArrowRight, ShieldCheck } from 'lucide-react';
@@ -92,7 +92,7 @@ export const MyOrders = () => {
           onClick={() => navigate('/')}
           className="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl transition inline-flex items-center gap-2"
         >
-          Colección <ArrowRight size={14} />
+          ColecciÃ³n <ArrowRight size={14} />
         </button>
       </div>
 
@@ -100,12 +100,12 @@ export const MyOrders = () => {
         <div className="bg-zinc-900/60 border border-zinc-800 p-12 rounded-3xl text-center backdrop-blur-md">
           <Package size={48} className="mx-auto text-zinc-600 mb-4" />
           <h3 className="text-sm font-black text-white uppercase tracking-wider mb-2">No tienes compras registradas</h3>
-          <p className="text-xs text-zinc-400 mb-6">Cuando realices un pedido mediante Stripe, aparecerá reflejado aquí.</p>
+          <p className="text-xs text-zinc-400 mb-6">Cuando realices un pedido mediante Stripe, aparecerÃ¡ reflejado aquÃ­.</p>
           <button
             onClick={() => navigate('/')}
             className="bg-white hover:bg-amber-400 text-black text-xs font-black uppercase tracking-wider px-6 py-3 rounded-xl transition"
           >
-            Explorar Catálogo
+            Explorar CatÃ¡logo
           </button>
         </div>
       ) : (
@@ -143,7 +143,7 @@ export const MyOrders = () => {
                     <div className="flex-1 min-w-0">
                       <h5 className="font-bold text-white text-xs truncate uppercase">{item.product?.title}</h5>
                       <p className="text-[11px] text-zinc-400 mt-0.5">
-                        Cantidad: <span className="text-white font-bold">{item.quantity}</span> · ${item.price.toFixed(2)}
+                        Cantidad: <span className="text-white font-bold">{item.quantity}</span> Â· ${item.price.toFixed(2)}
                       </p>
                     </div>
                   </div>

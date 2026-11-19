@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import API from '../api';
 import { useCartStore } from '../store/useCartStore';
 import { Search, ShoppingBag, Sparkles, Shield, Layers, Check } from 'lucide-react';
@@ -52,7 +52,7 @@ export const Catalog = () => {
       
       let fetchedProducts = res.data.products || res.data || [];
 
-      // Filtrar localmente por highlight si se seleccionó uno específico (como DEUS o BUZOS)
+      // Filtrar localmente por highlight si se seleccionÃƒÂ³ uno especÃƒÂ­fico (como DEUS o BUZOS)
       if (selectedHighlight && selectedHighlight !== 'NEW') {
         fetchedProducts = fetchedProducts.filter((p: any) => 
           p.highlight?.toUpperCase() === selectedHighlight.toUpperCase() ||
@@ -196,7 +196,7 @@ export const Catalog = () => {
         {selectedHighlight && (
           <div className="mb-6 flex items-center justify-between bg-amber-400/10 border border-amber-400/30 px-4 py-3 rounded-xl">
             <span className="text-xs text-amber-400 font-bold uppercase tracking-wider">
-              Filtrando por línea destacada: {selectedHighlight}
+              Filtrando por lÃƒÂ­nea destacada: {selectedHighlight}
             </span>
             <button
               onClick={() => setSelectedHighlight('')}
